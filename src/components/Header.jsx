@@ -4,7 +4,7 @@ import { MdOutlineShoppingCart } from "react-icons/md";
 import logo from "../assest/logo.png";
 const Header = () => {
   return (
-    <nav className="h-[5.5rem] w-full border flex justify-between items-center pr-[1.5rem]">
+    <nav className="h-[5.5rem] w-full flex justify-between items-center pr-[1.5rem]">
       <div className="">
         <img src={logo} alt="" className="h-[4rem] w-[4rem]" />
       </div>
@@ -20,11 +20,11 @@ const Header = () => {
         </div>
         <div className="flex gap-[1.5rem]">
           <div className="flex items-center gap-[4px]">
-            <span className="font-bold text-[18px]">login</span>
+            <span className="font-bold text-[16px]">login</span>
             <IoIosArrowRoundForward />
           </div>
           <div className="">
-            <button className="bg-[#EBAD1E] focus:outline-none px-[2rem] py-[.5rem] rounded-full text-black text-[14px]">
+            <button className="bg-[#EBAD1E] font-semibold focus:outline-none px-[2rem] py-[.5rem] rounded-full text-black text-[14px]">
               Book Service
             </button>
           </div>

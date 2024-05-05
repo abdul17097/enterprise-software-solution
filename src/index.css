@@ -2,32 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
-
-body {
-    background-color: #F8F8F8;
-    user-select: none;
+.stepper{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 1026px;
+    height: 77px;
 }
 
-.userTable{
-    @apply bg-white rounded-md
+.step{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
 
-.userTable th{
-    @apply px-4 py-4  border-b-2 border-gray-300 text-left text-sm font-medium text-gray-700 capitalize tracking-wider
+.step-symbol{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: white;
+    margin-bottom: 5px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
 }
 
-.userTable td{
-    @apply px-4 py-3 border-b border-gray-200 text-sm  text-gray-900
+.active {
+    background-color: #EBAD1E;
 }
 
-.scrollbar::-webkit-scrollbar{
-    scroll-behavior: smooth;
-    @apply bg-transparent w-1
-}
-.scrollbar::-webkit-scrollbar-thumb{
-    @apply bg-slate-300
+.complete {
+background-color: #EBAD1E;
 }
 
-.gradient-color{
-    background: linear-gradient(89.84deg, rgba(230, 36, 174, .15) .34%, rgba(94, 58, 255, .15) 16.96%, rgba(10, 136, 255, .15) 34.66%, rgba(75, 191, 80, .15) 50.12%, rgba(137, 206, 0, .15) 66.22%, rgba(239, 183, 0, .15) 82%, rgba(246, 73, 0, .15) 99.9%)
+.progress-bar{
+    position: absolute;
+    top: 30%;
+    left: 0;
+    height: 4px;
+    background-color: #EAEAEA;;
+}
+
+.progress{
+    height: 100%;
+    background-color: #EBAD1E;
+    transition: 0.2s ease;
 }

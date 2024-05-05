@@ -25,7 +25,7 @@ const Services = () => {
     },
   ];
   return (
-    <div className="shadow py-[2rem] px-[3rem] border border-slate-200 rounded-[12px] bg-white flex flex-col gap-[1.5rem]">
+    <div className="shadow-custom py-[2rem] px-[3rem] border border-slate-200 rounded-[12px] bg-white flex flex-col gap-[1.5rem]">
       <div
         className="flex items-center justify-between cursor-pointer"
         onClick={() => setIsOpen(!isOpen)}
@@ -55,10 +55,12 @@ const Services = () => {
         <div className={`flex flex-wrap gap-[2rem] `}>
           {servicesData.map((service, index) => (
             <Card
+              key={service.title}
               title={service.title}
               image={service.image}
               description={service.description}
               action={setServices}
+              active={servicesData.includes(service.title)}
             />
           ))}
         </div>

@@ -1,11 +1,14 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-const Card = ({ image, title, description, action }) => {
+const Card = ({ image, title, description, action, active }) => {
+  console.log(active);
   const dispatch = useDispatch();
   return (
     <div
       onClick={() => dispatch(action(title))}
-      className="border border-slate-300 h-[18rem] w-[16rem] rounded-[1rem] flex flex-col gap-[1rem] overflow-hidden cursor-pointer"
+      className={`border border-slate-300 h-[18rem] w-[16rem] rounded-[1rem] flex flex-col gap-[1rem] overflow-hidden cursor-pointer ${
+        active && "border-[2px] border-[#0e0f1226]"
+      }`}
     >
       <div className="h-[9.5rem] w-full">
         <img src={image} alt="" className="h-full w-full object-cover" />

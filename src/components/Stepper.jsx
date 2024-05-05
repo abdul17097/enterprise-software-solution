@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-
-import { useSelector } from "react-redux";
+import { IoCheckmarkOutline } from "react-icons/io5";
 
 const Stepper = ({ currentStep, stepsConfig, isComplete }) => {
   const [margins, setMargins] = useState({
@@ -9,7 +8,6 @@ const Stepper = ({ currentStep, stepsConfig, isComplete }) => {
   });
   const stepRef = useRef([]);
   useEffect(() => {
-    console.log(margins);
     setMargins({
       marginLeft: stepRef.current[0].offsetWidth / 2 + 10,
       marginRight: stepRef.current[currentStep - 1].offsetWidth / 2,
@@ -35,7 +33,9 @@ const Stepper = ({ currentStep, stepsConfig, isComplete }) => {
                   : ""
               } ${currentStep === index + 1 ? "active border-none" : ""}`}
             >
-              {(currentStep > index + 1 || isComplete) && "✔"}
+              {(currentStep > index + 1 || isComplete) && (
+                <IoCheckmarkOutline className="text-white" />
+              )}
             </div>
             <div className="step-name">{step.name}</div>
           </div>

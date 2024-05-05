@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import { MdKeyboardArrowDown, MdOutlineNavigateNext } from "react-icons/md";
-import { FiPlus } from "react-icons/fi";
 import { RiFileCopyLine } from "react-icons/ri";
 import Question from "./Question";
 import { useDispatch, useSelector } from "react-redux";
@@ -16,7 +15,6 @@ const TaskDetails = () => {
   const { questions, description, image } = useSelector(
     (state) => state.task.taskDetails
   );
-  console.log(questions, description, image);
 
   const imagRef = useRef();
   const handleOptionChange = (question, value) => {
@@ -31,7 +29,7 @@ const TaskDetails = () => {
     dispatch(setTaskDescription(e.target.value));
   };
   return (
-    <div className="shadow py-[2rem] px-[3rem] border border-slate-200 rounded-[12px] bg-white flex flex-col gap-[1.5rem]">
+    <div className="shadow-custom py-[2rem] px-[3rem] border border-slate-200 rounded-[12px] bg-white flex flex-col gap-[1.5rem]">
       <div
         className="flex items-center justify-between cursor-pointer"
         onClick={() => setIsOpen(!isOpen)}

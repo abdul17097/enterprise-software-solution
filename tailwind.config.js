@@ -2,14 +2,14 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    container: {
-      padding: {
-        DEFAULT: "1rem",
-        lg: "1rem",
-        xl: "4rem",
+    extend: {
+      fontFamily: {
+        sans: ['"Open Sans"', "sans-serif"],
+      },
+      boxShadow: {
+        custom: "0px 12px 16px 0px #28293D09",
       },
     },
-    extend: {},
   },
   plugins: [],
 };

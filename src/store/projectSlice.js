@@ -13,6 +13,10 @@ const initialState = {
     description: "",
     image: null,
   },
+  schedule: {
+    date: "",
+    time: "",
+  },
 };
 
 const ProjectSlice = createSlice({
@@ -59,8 +63,13 @@ const ProjectSlice = createSlice({
       state.taskDetails.description = action.payload;
     },
     setTaskImage: (state, action) => {
-      console.log(action.payload);
       state.taskDetails.image = action.payload;
+    },
+    setDate: (state, action) => {
+      state.schedule.date = action.payload;
+    },
+    setTime: (state, action) => {
+      state.schedule.time = action.payload;
     },
   },
 });
@@ -74,6 +83,8 @@ export const {
   setTaskTitle,
   setTaskDescription,
   setTaskImage,
+  setDate,
+  setTime,
 } = ProjectSlice.actions;
 
 export default ProjectSlice.reducer;

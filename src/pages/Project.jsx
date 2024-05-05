@@ -4,7 +4,7 @@ import Schedule from "../components/Schedule";
 import Cart from "../components/Cart";
 import Confirm from "../components/Confirm";
 import Stepper from "../components/Stepper";
-
+import { IoIosArrowRoundForward } from "react-icons/io";
 const Project = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [isComplete, setIsComplete] = useState(false);
@@ -47,9 +47,20 @@ const Project = () => {
         isComplete={isComplete}
       />
       <div className="">{stepsConfig[currentStep - 1].component}</div>
-      <button onClick={handleNext}>
-        {currentStep === stepsConfig.length ? "Finsh" : "Next"}
-      </button>
+      <div className="w-full py-[1rem] px-[1.5rem] flex flex-col justify-center items-center gap-[2rem]">
+        <button
+          onClick={handleNext}
+          className="py-[1.5rem] px-[2.5rem] border rounded-[2.5rem] text-[1.5rem] font-[400] bg-[#0F1337] text-[#FFFF]"
+        >
+          {currentStep === stepsConfig.length
+            ? "Finsh"
+            : `Continue to ${stepsConfig[currentStep - 1].name}`}
+        </button>
+        <div className="flex items-center gap-1 cursor-pointer">
+          <p className="font-bold text-lg">Save for later</p>
+          <IoIosArrowRoundForward />
+        </div>
+      </div>
     </div>
   );
 };

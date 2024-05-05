@@ -52,3 +52,45 @@ background-color: #EBAD1E;
     background-color: #EBAD1E;
     transition: 0.2s ease;
 }
+
+/* Calender design */
+.react-datepicker{
+    border: none !important;
+}
+.react-datepicker__header{
+    background-color: transparent !important;
+    border-bottom: none !important;
+    padding: 20px 0px !important;
+}
+.react-datepicker__month-container{
+    @apply w-[30rem]
+}
+.react-datepicker__week {
+    @apply w-full flex justify-between
+}
+.react-datepicker__day-names {
+    @apply w-full flex justify-between text-2xl font-[600]
+}
+.react-datepicker__month{
+    @apply flex flex-col gap-5
+}
+.react-datepicker__navigation{
+    top: 2.5rem !important;
+    width: 228px !important;
+}
+
+.react-datepicker__day {
+    @apply text-2xl font-[400]
+}
+.react-datepicker__current-month {
+    font-size: 24px !important;
+    font-weight: 400;
+    padding: 20px !important;
+}
+
+.react-datepicker__day--selected{
+    background-color: #0F1337 !important;
+    border-radius: 50% !important;
+    font-size: large;
+}
+

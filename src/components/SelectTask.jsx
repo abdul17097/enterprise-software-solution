@@ -1,8 +1,4 @@
 import React from "react";
-import Schedule from "./Schedule";
-import Cart from "./Cart";
-import Confirm from "./Confirm";
-import { useSelector } from "react-redux";
 import JobCategory from "./JobCategory";
 import Services from "./Services";
 import Task from "./Task";
@@ -23,8 +19,6 @@ const SelectTask = () => {
         <Task />
         <TaskDetails />
       </div>
-      {/* <div className="">{steps[currentstep]}</div> */}
-      <button className="">Submit</button>
     </div>
   );
 };

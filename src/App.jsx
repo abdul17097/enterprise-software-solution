@@ -8,7 +8,7 @@ const App = () => {
     <div className="px-[2rem] flex flex-col gap-[2.5rem]">
       <Header />
       <Project />
-      {/* <Footer />   */}
+      <Footer />
     </div>
   );
 };

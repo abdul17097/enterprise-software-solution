@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { MdKeyboardArrowDown, MdOutlineNavigateNext } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 import Card from "./Card";
-import paint from "../assest/paint.jpg";
-import drywall from "../assest/drywall.jpg";
+import paint from "../asset/paint.png";
+import drywall from "../asset/drywall.jpg";
 import { setServices } from "../store/ProjectSlice";
 const Services = () => {
   const [isOpen, setIsOpen] = useState(false);

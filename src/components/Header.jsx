@@ -1,7 +1,7 @@
 import React from "react";
 import { IoIosArrowDown, IoIosArrowRoundForward } from "react-icons/io";
 import { MdOutlineShoppingCart } from "react-icons/md";
-import logo from "../assest/logo.png";
+import logo from "../asset/logo.png";
 const Header = () => {
   return (
     <nav className="h-[5.5rem] w-full flex justify-between items-center pr-[1.5rem]">

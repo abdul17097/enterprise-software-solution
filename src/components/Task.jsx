@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { MdKeyboardArrowDown, MdOutlineNavigateNext } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 import Card from "./Card";
-import paintAttach from "../assest/paintAttach.png";
-import paintRoom from "../assest/paintRoom.png";
-import paintWall from "../assest/paintWall.png";
+import paintAttach from "../asset/paintAttach.png";
+import paintRoom from "../asset/paintRoom.png";
+import paintWall from "../asset/paintWall.png";
 import { setTasks } from "../store/ProjectSlice";
 const Task = () => {
   const [isOpen, setIsOpen] = useState(false);

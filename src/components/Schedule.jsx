@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Calendar } from "primereact/calendar";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import CheckBox from "./CheckBox";

@@ -7,13 +7,13 @@ import {
   setTaskDescription,
   setTaskImage,
   setTaskQuestion,
-} from "../store/projectSlice";
+} from "../store/ProjectSlice";
 
 const TaskDetails = () => {
   const [isOpen, setIsOpen] = useState(false);
   const dispatch = useDispatch();
   const { questions, description, image } = useSelector(
-    (state) => state.task.taskDetails
+    (state) => state.project.taskDetails
   );
 
   const imagRef = useRef();

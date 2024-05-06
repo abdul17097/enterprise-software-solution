@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Calendar } from "primereact/calendar";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import CheckBox from "./CheckBox";
 import { setDate, setTime } from "../store/ProjectSlice";
 const Schedule = () => {
-  const [startDate, setStartDate] = useState();
-  const [selectedTime, setSelectedTime] = useState(null);
   const dispatch = useDispatch();
+  const { schedule } = useSelector((state) => state.project);
   const morning = [
     { time: "9:30 am" },
     { time: "10:00 am" },
@@ -43,10 +42,6 @@ const Schedule = () => {
     { time: "11:30 pm" },
   ];
 
-  useEffect(() => {
-    dispatch(setDate(startDate));
-    dispatch(setTime(selectedTime));
-  }, [startDate, selectedTime]);
   return (
     <div className="flex flex-col gap-[2.5rem]">
       <h1 className="text-[2rem] font-semibold">Schedule your Task</h1>
@@ -57,8 +52,8 @@ const Schedule = () => {
 
             <div className="flex px-[6rem]">
               <DatePicker
-                selected={startDate}
-                onChange={(date) => dispatch(setDate(date))}
+                selected={schedule.date}
+                onChange={(date) => dispatch(setDate(date.toString()))}
                 inline
               />
             </div>
@@ -69,35 +64,20 @@ const Schedule = () => {
               <h3 className="text-xl font-sans font-semibold">Morning</h3>
             </div>
             <div className="flex flex-wrap gap-[1rem]">
-              {morning.map((hour) => (
-                <CheckBox
-                  key={hour.time}
-                  hour={hour.time}
-                  selectedTime={selectedTime}
-                  setSelectedTime={setSelectedTime}
-                />
+              {morning.map((hour, index) => (
+                <CheckBox key={index} hour={hour.time} />
               ))}
             </div>
             <h3 className="text-xl font-sans font-semibold">Afternoon</h3>
             <div className="flex flex-wrap gap-[1rem]">
-              {afternoon.map((hour) => (
-                <CheckBox
-                  key={hour.time}
-                  hour={hour.time}
-                  selectedTime={selectedTime}
-                  setSelectedTime={setSelectedTime}
-                />
+              {afternoon.map((hour, index) => (
+                <CheckBox key={index} hour={hour.time} />
               ))}
             </div>
             <h3 className="text-xl font-sans font-semibold">Evening</h3>
             <div className="flex flex-wrap gap-[1rem]">
-              {evening.map((hour) => (
-                <CheckBox
-                  key={hour.time}
-                  hour={hour.time}
-                  selectedTime={selectedTime}
-                  setSelectedTime={setSelectedTime}
-                />
+              {evening.map((hour, index) => (
+                <CheckBox key={index} hour={hour.time} />
               ))}
             </div>
           </div>

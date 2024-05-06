@@ -4,11 +4,11 @@ import { useDispatch, useSelector } from "react-redux";
 import Card from "./Card";
 import paint from "../assest/paint.jpg";
 import drywall from "../assest/drywall.jpg";
-import { setServices } from "../store/projectSlice";
+import { setServices } from "../store/ProjectSlice";
 const Services = () => {
   const [isOpen, setIsOpen] = useState(false);
   const dispatch = useDispatch();
-  const { services } = useSelector((state) => state.task);
+  const { services } = useSelector((state) => state.project);
 
   const servicesData = [
     {
@@ -37,8 +37,10 @@ const Services = () => {
               services?.length === 0 ? "hidden" : "pl-8"
             } `}
           >
-            {services?.map((category) => (
-              <li className="text-[1.3rem] font-[400]">{category}</li>
+            {services?.map((category, index) => (
+              <li key={index} className="text-[1.3rem] font-[400]">
+                {category}
+              </li>
             ))}
           </ul>
           {isOpen ? (

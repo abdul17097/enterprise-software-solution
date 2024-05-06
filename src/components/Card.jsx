@@ -1,7 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 const Card = ({ image, title, description, action, active }) => {
-  console.log(active);
   const dispatch = useDispatch();
   return (
     <div

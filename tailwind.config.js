@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ['"Open Sans"', "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
       },
       boxShadow: {
         custom: "0px 12px 16px 0px #28293D09",

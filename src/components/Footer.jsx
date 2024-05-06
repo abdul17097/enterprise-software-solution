@@ -24,7 +24,7 @@ const Footer = () => {
       </div>
       <div className="flex justify-between items-center">
         <p className="font-[400] text-sm text-[#807E7E]">© 2023 Fixaroo </p>
-        <div className="flex gap-4">
+        <div className="flex gap-[2.5rem]">
           <SlSocialFacebook className="text-2xl" />
           <SlSocialInstagram className="text-2xl" />
           <TbBrandTwitter className="text-2xl" />

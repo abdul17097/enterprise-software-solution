@@ -5,11 +5,11 @@ import Card from "./Card";
 import paintAttach from "../assest/paintAttach.png";
 import paintRoom from "../assest/paintRoom.png";
 import paintWall from "../assest/paintWall.png";
-import { setTasks } from "../store/projectSlice";
+import { setTasks } from "../store/ProjectSlice";
 const Task = () => {
   const [isOpen, setIsOpen] = useState(false);
   const dispatch = useDispatch();
-  const { tasks } = useSelector((state) => state.task);
+  const { tasks } = useSelector((state) => state.project);
 
   const taskData = [
     {
@@ -44,8 +44,10 @@ const Task = () => {
               tasks?.length === 0 ? "hidden" : "pl-8"
             } `}
           >
-            {tasks?.map((category) => (
-              <li className="text-[1.3rem] font-[400]">{category}</li>
+            {tasks?.map((category, index) => (
+              <li key={index} className="text-[1.3rem] font-[400]">
+                {category}
+              </li>
             ))}
           </ul>
           {isOpen ? (

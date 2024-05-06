@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* stepper Design start */
 .stepper{
     position: relative;
     display: flex;
@@ -53,7 +54,8 @@ background-color: #EBAD1E;
     transition: 0.2s ease;
 }
 
-/* Calender design */
+
+/* Calender design start*/
 .react-datepicker{
     border: none !important;
 }

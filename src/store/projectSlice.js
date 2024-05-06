@@ -14,13 +14,13 @@ const initialState = {
     image: null,
   },
   schedule: {
-    date: "",
+    date: new Date().toISOString(),
     time: "",
   },
 };
 
 const ProjectSlice = createSlice({
-  name: "accordain",
+  name: "project",
   initialState,
   reducers: {
     setJobCategories: (state, action) => {
